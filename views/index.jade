@@ -2,4 +2,14 @@ extends layout
 
 block content
   h1= title
+  form(action="/new")
+    input(
+      type="submit"
+      value="New Message"
+    )
   p Welcome to #{title}
+  each message in messages
+    div= message.text
+    div= message.user
+    div= message.added
+    h1=""
